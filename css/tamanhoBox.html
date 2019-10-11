@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="4">
+    <title>Tamanho Box</title>
+    <style>
+        *{
+            box-sizing: border-box; /*assim todos elementos assumem esse padrão*/
+        }
+        body {
+            font-size: 45px;
+        }
+
+        div {
+            background-color: deepskyblue;
+            width: 100%;
+            height: 300px;
+            padding: 100px;
+            border: solid 20px;
+            box-sizing: border-box; /*border-box = assim ele toma 100% o tamanho do body mas considerando padding bordar e conteudo */
+            /*content-box = o conteudo toma 100% da body + mais padding e border, acaba estrapolando tamanho da página*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        O tamanho do Box é...
+    </div>
+</body>
+</html>

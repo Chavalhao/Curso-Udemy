@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="4"> -->
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        /* * {
+            color: #ff0;
+            background-color: #f77;
+        }, universal  */
+        /* .tag {
+            color: #ff0;
+            background-color: #f77;
+        }, unico não marcado é body */
+        /* #aprovados {
+            color: #ff0;
+            background-color: #f77;
+        }, só aprovador selecionado */
+        /* #aninhado>div {
+            color: #ff0;
+            background-color: #f77;
+        }, só a div dentro de aninhado */
+        /* #aninhado section {
+            color: #ff0;
+            background-color: #f77;
+        }, assim qualquer section dentro de aninhado sera selecionado */
+        /* p+ul {
+            color: #ff0;
+            background-color: #f77;
+        }, seleciona ul depois de p */
+        /* p+ol {
+            color: #ff0;
+            background-color: #f77;
+        } aqui ele n funciona pois os dois não são vizinhos */
+        /* p~ol {
+            color: #ff0;
+            background-color: #f77;
+        }, assim ele seleciona a ol pois ele pega a tag filho de p mesmo que não seja vizinhos*/
+        /* [feira] {
+            color: #ff0;
+            background-color: #f77;
+        }, seleciona todos que tenham o atributo feira */
+        /* [feira~=escritorio] {
+            color: #ff0;
+            background-color: #f77;
+        }, pega possiveis elementos que tenham escritorio seguido de espaço */
+        /* [feira*=sa] {
+            color: #ff0;
+            background-color: #f77;
+        }, pega possiveis elementos com 'sa' na tag */
+        /* span:nth-child(1){
+            color: #ff0;
+            background-color: #f77;
+        }, aqui ele pegaria um spn que seja filho de alguem e esteja na primeira posição  */
+        /* section>:nth-child(odd) {
+            color: #ff0;
+            background-color: #f77;
+        }, pega todos os filhos de section que sejam impares */
+        /* section>span:nth-last-of-type(2) {
+            color: #ff0;
+            background-color: #f77;
+        }, pega o segundo elemento dentro da section que seja do tipo span */
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class=''>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

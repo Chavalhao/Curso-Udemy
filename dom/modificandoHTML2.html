@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <p>Texto Inicial</p>
+    </div>
+    <script>
+        const div = document.querySelector('div')
+        div.innerHTML = 'Texto Alterado' // ele altera tudo que esta dentro da tua div pelo valor que tu botou
+        //div.outerHTML = 'Texto Alterado' // ele substitui tudo até mesmo a div que voce referênciou
+        div.insertAdjacentHTML('beforebegin', '<p>Antes Início</p>') // ele adc antes da div que voce referênciou
+        div.insertAdjacentHTML('afterbegin', '<p>Depois do Início</p>') // adc depois da div
+        div.insertAdjacentHTML('beforeend', '<p>Antes Fim</p>')// coloca antes do fim
+        div.insertAdjacentHTML('afterend', '<p>Depois Fim</p>')// depois da div 
+
+        console.log(div.innerHTML) // retorna todas as tags dentro da div
+        console.log(div.innerText) // retorna todas as texts dentro da div
+    </script>
+</body>
+
+</html>

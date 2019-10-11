@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="4"> -->
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://specificity.keegan.st/ */
+        /*
+            1. Inline
+            2. ID
+            3. Classe, Pseudo-Classe, atributo
+            4. Elemento, Pseudo-Elementos
+        */
+        
+        body {
+            font-size: 40px;
+        }
+        
+        div {
+            background-color: blue;
+            color: white;
+        }
+        
+        div[wm-cor] {
+            /*esse ganha por nivel de especificidade */
+            /*ganharia do hover se tivesse depois dele, mesmo tendo mesmo nivel de especificidade, pela regra de processo*/
+            background-color: darkorange;
+        }
+        
+        div:hover {
+            /*hover ganharia de .estilo se tivesse sido processado depois*/
+            background-color: purple;
+        }
+        
+        div.estilo {
+            background-color: green;
+        }
+        
+        #unico1,
+        #unico2 {
+            /* id ganha da classe, hover só funciona se tiver aplicação unica ex: #unico1:hover*/
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="unico1" class="estilo" style="background-color: red">
+        <!-- estyle inline ganha por ter especificidade maior -->
+        #unico1 vs .estilo vs inline
+    </div>
+    <div id="unico2" class="estilo">#unico2 vs .estilo</div>
+    <div class="estilo" wm-cor>.estilo vs wm-cor</div>
+    <div wm-cor>wm-cor</div>
+    <div class="estilo">.estilo</div>
+    <div>elemento</div>
+</body>
+
+</html>

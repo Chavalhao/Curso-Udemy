@@ -1,0 +1,26 @@
+.seletor {
+    color: #222;
+    font-size: 30px;
+    text-align: center;
+    /*multiplos valores*/
+    border: solid 5px navy;
+    /*shorthand property*/
+    font-family: Helvetica, monospace;
+    width: calc(100% - 40px);
+    background-color: rgb(134, 153, 189)
+}
+
+
+/* usando uma pseudo-classe */
+
+.seletor:hover {
+    background-color: rgb(104, 123, 159);
+}
+
+
+/* usando um pseudo-elemento */
+
+.seletor::first-letter {
+    font-weight: bold;
+    font-size: 60px;
+}

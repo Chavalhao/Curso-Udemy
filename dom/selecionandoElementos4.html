@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #04</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <p>Início</p>
+    </div>
+    <div>
+        <ul>
+            <li>Pedro</li>
+            <li>Ana</li>
+            <li>Bia</li>
+        </ul>
+    </div>
+    <div>
+        <p>Fim</p>
+    </div>
+    <script>
+        function log(){
+            console.log(this)
+        }
+
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+
+        const lista = document.querySelector('div ul')
+        lista.parentNode.log() // apartir de um determinado elemento voce pode pegar seu elemento pai
+        lista.childNodes.log() // chama a lista de nós da ul
+        //imprimiu no console NodeList(7) [text, li, text, li, text, li, text]
+        // esses textos que aparecem é por causa dos espaços entre os elementos
+        const primeiro = lista.firstChild
+        primeiro.log()
+        primeiro.nextSibling.log() // proximo irmao desse elemento 
+        const ultimo = lista.lastChild
+        ultimo.log()
+        ultimo.previousSibling.log() // elemento anterior do ultimo elemento
+
+        lista.children.log() // aqui ele vem todos li's sem os text
+        lista.firstElementChild.log() // traz o primeiro elemento que foi defino dentro da lista
+        lista.lastElementChild.log()
+        lista.parentNode.previousElementSibling.log() // ele pega o elemento anterior da parent da lista
+        lista.parentNode.nextElementSibling.log()
+
+        document.querySelectorAll('div ul li').log()
+    </script>
+</body>
+
+</html>

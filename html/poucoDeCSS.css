@@ -1,0 +1,21 @@
+h1 {
+    font-size: 20px;
+    background-color: blue;
+}
+
+.fundoVermelho {
+    background-color: rgb(224, 21, 21);
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+#textoPrincipal {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    background-color: rgb(60, 60, 139);
+    margin-bottom: 50px;
+}
