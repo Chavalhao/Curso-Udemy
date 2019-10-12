@@ -1,6 +1,6 @@
-<h4>curso Web Moderno da <strong><a href="https://www.udemy.com/course/curso-web/" target="_blank">Udemy</a></strong>.</h4> 
+<h1>curso Web Moderno da</h1> <h4><strong><a href="https://www.udemy.com/course/curso-web/" target="_blank">Udemy</a></strong>.</h4> 
 
-<h1>Todos exercicios do curso</h1>
+<h4>Todos exercicios do curso</h4>
 
 <h3>Tecnologias</h3>
 <ul>
